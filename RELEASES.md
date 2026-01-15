@@ -332,3 +332,50 @@ First pre-release, supporting:
 - `notion install` (Node and Yarn only, no package binaries)
 - `notion use`
 - Proof-of-concept plugin API
+- I wanted to run some node scripts on my raspberry pi so I got this working tonight.
+
+The Pi 3b is on armv7l arch:
+
+$ uname -a
+Linux raspberrypi 4.19.97-v7+ #1294 SMP Thu Jan 30 13:15:58 GMT 2020 armv7l GNU/Linux
+I had to compile using nightly, and that worked fine
+
+$ ./dev/unix/volta-install.sh --release
+Then everything else just worked
+
+$ volta install node
+success: installed and set node@12.16.2 (with npm@6.14.4) as default
+
+$ node --version
+v12.16.2
+
+$ node  -e "console.log(process.platform, process.arch)"
+linux arm
+
+$ volta install yarn
+success: installed and set yarn@1.22.4 as default
+
+$ yarn --version
+1.22.4
+
+$ volta install cowsay
+success: installed cowsay@1.4.0 with executables: cowthink, cowsay
+
+$ cowsay ⚡️⚡️⚡️
+ ________
+< ⚡️⚡️⚡️ >
+ --------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+Testing
+The unit tests pass ✅
+
+cargo test --package volta-core --package volta-fail --package archive --package volta-fail-derive --package progress-read --package volta-layout --package volta-layout-macro -- --test-threads=1
+I was not able to run the other tests. Both of these are hanging on the build step before running the tests. Not sure what is happening there
+
+cargo test --features mock-network
+
+cargo test --test smoke --features smoke-tests -- --test-threads 1
