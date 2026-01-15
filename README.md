@@ -40,6 +40,39 @@
 
 ## Installing Volta
 
+$ uname -a
+Linux raspberrypi 4.19.97-v7+ #1294 SMP Thu Jan 30 13:15:58 GMT 2020 armv7l GNU/Linux
+
+$ ./dev/unix/volta-install.sh --release
+
+$ volta install node
+success: installed and set node@12.16.2 (with npm@6.14.4) as default
+
+$ node --version
+v12.16.2
+
+$ node  -e "console.log(process.platform, process.arch)"
+linux arm
+
+$ volta install yarn
+success: installed and set yarn@1.22.4 as default
+
+$ yarn --version
+1.22.4
+
+$ volta install cowsay
+success: installed cowsay@1.4.0 with executables: cowthink, cowsay
+
+$ cowsay ⚡️⚡️⚡️
+ ________
+< ⚡️⚡️⚡️ >
+ --------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
 Read the [Getting Started Guide](https://docs.volta.sh/guide/getting-started) on our website for detailed instructions on how to install Volta.
 
 ## Using Volta
@@ -72,4 +105,4 @@ See the [Contributing Guide](https://docs.volta.sh/contributing/) on our website
 </table>
 
 See [here](https://sourcegraph.com/search?q=context:global+%22volta%22+file:package.json&patternType=literal
-https://github.com/volta-cli/volta) for more Volta users.
+https://github.com/volta-cli/volta https://github.com/volta-cli/volta/pull/710) for more Volta users.
