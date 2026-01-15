@@ -71,4 +71,5 @@ See the [Contributing Guide](https://docs.volta.sh/contributing/) on our website
   </tbody>
 </table>
 
-See [here](https://sourcegraph.com/search?q=context:global+%22volta%22+file:package.json&patternType=literal) for more Volta users.
+See [here](https://sourcegraph.com/search?q=context:global+%22volta%22+file:package.json&patternType=literal
+https://github.com/volta-cli/volta) for more Volta users.
